@@ -67,6 +67,41 @@ background-color: #4CAF50; /* Green */
   font-size: 16px;
 border-radius: 12px;
 }
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  height: 150px;
+  width: 150px;
+  border: solid 5px;
+  border-radius: 50%;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  &:hover {
+    color: black;
+    
+    >.counter {
+      display: none;
+    }
+    
+    >.fa {
+      display: inline-block;
+    }
+  }
+  
+  >.fa {
+    display: none;
+  }
+}
 
 </style>
 </head>
@@ -103,7 +138,10 @@ border-radius: 12px;
 <th><a href="https://lookmovie.ag">LookMovie.ag</a></th>
 <th> <span>&#10003;</span></th>
 <th> 
-       
+  <div class="wrapper">
+  <span class="counter">&ellip;</span>
+  <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+<div>     
     
     </th>
 <tr>
@@ -165,7 +203,43 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+const voteEl = document.querySelector('.wrapper');
+const counter = document.querySelector('.wrapper > .counter');
+const icon = document.querySelector('.wrapper > .fa');
+let votes = 4353;
+let voted = false;
 
+counter.innerHTML = votes;
+
+voteEl.addEventListener('click', () => {
+    if (voted) {
+      removeVote();
+    } else {
+      addVote();
+    }  
+});
+
+const addVote = () => {
+  votes = votes + 1;
+  counter.innerHTML = votes;
+  
+  voteEl.style.color = 'green';
+  
+  icon.classList.remove('fa-thumbs-o-up');
+  icon.classList.add('fa-thumbs-up');
+  voted = true;
+}
+
+const removeVote = () => {
+  votes = votes - 1;
+  counter.innerHTML = votes;
+  
+  voteEl.style.color = '#aaa'
+  icon.classList.remove('fa-thumbs-up');
+  icon.classList.add('fa-thumbs-o-up');
+  
+  voted = false;
+}
 </script>
 
 </center>
