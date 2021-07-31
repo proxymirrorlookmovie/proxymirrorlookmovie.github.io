@@ -123,7 +123,13 @@ Updated on 26.07.2021
 
 <p><font size=+1 face="Helvetica"><B>None of these works?</b></font>
   <p>
-        
+  var myCallback = function(val) { console.log(val); };
+grecaptcha.render(
+   document.getElementsById('my-recaptcha-placeholder'), 
+   {
+     callback: myCallback, 
+     sitekey: 6LfrUtAbAAAAACeajZgl3uBxkKNknk-ALOiwqxA0
+   });      
  <!-- Trigger/Open The Modal -->
 <button id="myBtn">Try This</button>
 
