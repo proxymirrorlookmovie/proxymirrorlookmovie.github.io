@@ -232,7 +232,24 @@ border-radius: 12px;
  <span id="output"></span>
  </div>
  </div>
-		<script>
+		
+			<br>
+			<br>
+			<br>
+  			<!-- Trigger/Open The Modal -->
+<button id="myBtn">Try This</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><a href=”https://lookmovie.com”> https://lookmovie.com</a></p>
+  </div>
+
+</div>
+<script>
 			// document.querySelector() is used to select an element from the document using its ID
 let captchaText = document.querySelector('#captcha');
 var ctx = captchaText.getContext("2d");
@@ -295,25 +312,6 @@ refreshButton.addEventListener('click', function() {
  ctx.fillText(refreshArr.join(''),captchaText.width/4, captchaText.height/2);
  output.innerHTML = "";
 });
-			</script>
-			<br>
-			<br>
-			<br>
-			<script>
-  			<!-- Trigger/Open The Modal -->
-<button id="myBtn">Try This</button>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p><a href=”https://lookmovie.com”> https://lookmovie.com</a></p>
-  </div>
-
-</div>
-<script>
 // Get the modal
 var modal = document.getElementById("myModal");
 
