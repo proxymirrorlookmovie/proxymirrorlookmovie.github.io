@@ -161,44 +161,7 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
-const voteEl = document.querySelector('.wrapper');
-const counter = document.querySelector('.wrapper > .counter');
-const icon = document.querySelector('.wrapper > .fa');
-let votes = 0;
-let voted = false;
 
-counter.innerHTML = votes;
-
-voteEl.addEventListener('click', () => {
-    if (voted) {
-      removeVote();
-    } else {
-      addVote();
-    }  
-});
-
-const addVote = () => {
-  votes = votes + 1;
-  counter.innerHTML = votes;
-  
-  voteEl.style.color = 'green';
-  
-  icon.classList.remove('fa-thumbs-o-up');
-  icon.classList.add('fa-thumbs-up');
-  voted = true;
-}
-
-const removeVote = () => {
-  votes = votes - 1;
-  counter.innerHTML = votes;
-  
-  voteEl.style.color = '#aaa'
-  icon.classList.remove('fa-thumbs-up');
-  icon.classList.add('fa-thumbs-o-up');
-  
-  voted = false;
-}
 </script>
 
 </center>
