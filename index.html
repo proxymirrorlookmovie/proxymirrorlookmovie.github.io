@@ -68,15 +68,15 @@ background-color: #4CAF50; /* Green */
 border-radius: 12px;
 }
 </style>
-     <script>
-        var onClick = function(token) {
+      <script>
+        var onSubmit = function(token) {
           console.log('success!');
         };
 
         var onloadCallback = function() {
-          grecaptcha.render('Try This', {
+          grecaptcha.render('submit', {
             'sitekey' : '6LfrUtAbAAAAACeajZgl3uBxkKNknk-ALOiwqxA0',
-            'callback' : onClick
+            'callback' : onSubmit
           });
         };
     </script>
@@ -113,7 +113,12 @@ border-radius: 12px;
 <tr>
 <th><a href="https://lookmovie.ag">LookMovie.ag</a></th>
 <th> <span>&#10003;</span></th>
-<th>  
+<th>  <form action="?" method="POST">
+      <input id='submit' type="submit" value="Submit">
+    </form>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script> 
     </th>
 <tr>
 <th><a href="https://lookmovie.io">LookMovie.io</a></th>
@@ -136,12 +141,9 @@ Updated on 26.07.2021
   <p>
   <!-- Trigger/Open The Modal -->
       
- <form action="?" method="POST">     
+ <!-- Trigger/Open The Modal -->
 <button id="myBtn">Try This</button>
-</form>
-     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
-    </script>
+
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
@@ -152,6 +154,7 @@ Updated on 26.07.2021
   </div>
 
 </div>
+
 
 <script>
 // Get the modal
