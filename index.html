@@ -68,18 +68,7 @@ background-color: #4CAF50; /* Green */
 border-radius: 12px;
 }
 </style>
-      <script>
-        var onSubmit = function(token) {
-          console.log('success!');
-        };
-
-        var onloadCallback = function() {
-          grecaptcha.render('submit', {
-            'sitekey' : '6LfrUtAbAAAAACeajZgl3uBxkKNknk-ALOiwqxA0',
-            'callback' : onSubmit
-          });
-        };
-    </script>
+     
 </head>
 <body>
 
@@ -113,12 +102,7 @@ border-radius: 12px;
 <tr>
 <th><a href="https://lookmovie.ag">LookMovie.ag</a></th>
 <th> <span>&#10003;</span></th>
-<th>  <form action="?" method="POST">
-      <input id='submit' type="submit" value="Submit">
-    </form>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
-    </script> 
+<th>  
     </th>
 <tr>
 <th><a href="https://lookmovie.io">LookMovie.io</a></th>
@@ -139,8 +123,7 @@ Updated on 26.07.2021
 
 <p><font size=+1 face="Helvetica"><B>None of these works?</b></font>
   <p>
-  <!-- Trigger/Open The Modal -->
-      
+        
  <!-- Trigger/Open The Modal -->
 <button id="myBtn">Try This</button>
 
