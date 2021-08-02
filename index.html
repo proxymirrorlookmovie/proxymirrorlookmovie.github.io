@@ -16,106 +16,7 @@
         		border-top: 2px solid #ddd;
 					}
 			body {font-family: Arial, Helvetica, sans-serif;}
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
 
-/* Modal Content */
-.modal-content {
-  background-color: #ffffff;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-
-		}
-#captchaBackground {
- height: 200px;
- width: 250px;
- display: flex;
- align-items: center;
- justify-content: center;
- flex-direction: column;
-}
-
-#captcha {
- height: 70%;
- width: 100%;
- font-size: 30px;
- letter-spacing: 3px;
- display: block;
- top: 0;
- bottom: 0;
- left: 0;
- right: 0;
-}
-.center {
- display: flex;
- flex-direction: column;
- align-items: center;
-}
-
-#textBox {
- height: 25px;
-}
-.incorrectCaptcha {
- color: #FF0000;
-}
-.correctCaptcha {
- color: #7FFF00;
-}
-		#submitButton {
- margin-top: 2em;
- margin-bottom: 2em;
- background-color: #00FF00;
- border: 0px;
- font-weight: bold;
-}
-#refreshButton {
- background-color: #00FF00;
- border: 0px;
- font-weight: bold;
-}
-
-
-button {
-background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-border-radius: 12px;
     	</style>
 	</head>    
 	
@@ -300,54 +201,15 @@ border-radius: 12px;
 				<span>&#10003;
 				</span>
 				</th>
+			<tr>
+				<th>
+				<a href="https://lookmovie.com">Lookmovie.com
+				</a>
+				</th>
+				<th> 
+				<span>&#10003;
+				</span>
+				</th>
 		</table>
-		<p>
-			Updated on 08.02.2021 
-		<p>
-		
-			Still fail to load?
-			<p>
-  			<!-- Trigger/Open The Modal -->
-<button id="myBtn">Try this one</button>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p><a href=”https://lookmovie.com”> https://lookmovie.com</a></p>
-  </div>
-
-</div>
-<script>
-			
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-	
-</script>
-	</body>
+			</body>
 </html>
